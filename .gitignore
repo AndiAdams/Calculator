@@ -26,6 +26,7 @@
 .idea/**/dbnavigator.xml
 .idea
 *.iml
+target
 
 # Gradle
 .idea/**/gradle.xml
