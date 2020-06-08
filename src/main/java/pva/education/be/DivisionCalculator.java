@@ -10,16 +10,7 @@ public class DivisionCalculator implements Calculator {
     private AddCalculator addCalculator = new AddCalculator();
     private MutliplyCalculator mutliplyCalculator = new MutliplyCalculator();
     private SEBCheckerImpl sebChecker = new SEBCheckerImpl();
-    private Number[] comma = new Number[]{
-            1,
-            0.1,
-            0.01,
-            0.001,
-            0.0001,
-            0.00001,
-            0.000001,
-            0.0000001
-    };
+    private Number[] comma;
 
     private Number[] setPrecision(double value){
 
@@ -37,7 +28,7 @@ public class DivisionCalculator implements Calculator {
             }
             value = result;
         }
-        Math.floor();
+
         reverse(numbers);
         return numbers;
     }
@@ -57,7 +48,9 @@ public class DivisionCalculator implements Calculator {
         this.comma = setPrecision(precision);
     }
 
-    public DivisionCalculator(){}
+    public DivisionCalculator(){
+       comma = setPrecision(0.000001);
+    }
     @Override
     public Number calc(Number first, Number second) {
 
